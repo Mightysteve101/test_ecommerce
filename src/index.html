@@ -21,6 +21,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@videojs/html/cdn/background.js"></script>
 
     <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
@@ -30,94 +31,48 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    Hero                      -->
+    <!--                     Hero                     -->
     <!-- ============================================ -->
 
-    <section id="hero-143">
-        <div class="cs-container">
-            <span class="cs-topper">CodeStitch Presents</span>
-            <h1 class="cs-title">
-                The Intermediate Website Kit (LESS)
-            </h1>
-            <p class="cs-text">
-                Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
-            </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+    <section id="hero-2153">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <div class="cs-flex">
+                        <h2 class="cs-title">Blancah Black</h2>
+                    </div>
+                    <p class="cs-text">An avant-garde groundbreaking artist whose vision preceded today's immense interest in electronic music & noise.</p>
+                </div>
+                <div class="cs-video-group">
+                    <div class="cs-video-wrapper">
+                        <background-video-player>
+                        <media-container class="media-minimal-skin media-minimal-skin--video">
+                            <background-video src="https://stream.mux.com/oyHDfstPsN0202jKhIcjJxqM1xdKH01PTrj324QHbB7VTA.m3u8" playsinline></background-video>
+
+                            <media-poster>
+                            <img src="assets/images/original/hero_image.png" />
+                            </media-poster>
+
+                            <media-buffering-indicator class="media-buffering-indicator">
+                            <media-icon name="spinner" family="minimal" class="media-icon"></media-icon>
+                            </media-buffering-indicator>
+
+                            <media-error-dialog class="media-error">
+                            <div class="media-error__dialog">
+                                <div class="media-error__content">
+                                <media-alert-dialog-title class="media-error__title">Something went wrong.</media-alert-dialog-title>
+                                <media-alert-dialog-description class="media-error__description"></media-alert-dialog-description>
+                                </div>
+                                <div class="media-error__actions">
+                                <media-alert-dialog-close class="media-button media-button--primary">OK</media-alert-dialog-close>
+                                </div>
+                            </div>
+                            </media-error-dialog>
+                        </media-container>
+                        </background-video-player>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
-
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Full Kitchen Remodel
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Exterior Repairs
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Utility Maintenance
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Design Consultation
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-        </ul>
     </section>
 
     <!-- ============================================ -->

@@ -1,6 +1,6 @@
 module.exports = {
     name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
+    email: "blancahblack@gmail.com",
     phoneForTel: "555-779-4407",
     phoneFormatted: "(555) 779-4407",
     address: {
@@ -13,8 +13,10 @@ module.exports = {
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        facebook: "https://www.facebook.com/BlancahBlack/",
+        instagram: "https://www.instagram.com/blancahblack",
+        youtube: "https://www.youtube.com/@Blancah29",
+        substack: "https://substack.com/@blancahb"
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://www.example.com",

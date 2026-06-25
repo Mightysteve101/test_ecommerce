@@ -6,323 +6,932 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
-<---           Hero             -->
+<---            Hero            -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-143 {
-        /* Centers button */
-        text-align: center;
-        /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 18.75rem) (16/16rem) 0;
-        /* 130px - 450px */
-        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
-        position: relative;
-        z-index: 1;
-        /* Prevents white rectangle pseudos from overlapping the sections below */
-        overflow: hidden;
-
-        &:before {
-            /* Left side of the triangle */
-            content: "";
-            width: (500/16rem);
-            /* make really long so it covers the whole screen all the way to desktop */
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(-67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: (-2235/16rem);
-            /* this makes the right edge sit at the 50% line at all times */
-            right: 50%;
-            z-index: 0;
-        }
-
-        &:after {
-            /* Right side of the triangle */
-            content: "";
-            width: (500/16rem);
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: (-2235/16rem);
-            /* this makes the left edge sit at the 50% line at all times */
-            left: 50%;
-            z-index: 0;
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
-
-            &:before {
-                /* Overlay */
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.7;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: center;
-            max-width: (829/16rem);
-            /* 16px - 24px */
-            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
-            color: #fff;
-            position: relative;
-
-            &:after {
-                /* Divider Line */
-                content: "";
-                /* 60px - 100px */
-                width: clamp(3.75rem, 9.5vw, 6.25rem);
-                /* 4px - 8px */
-                height: clamp(0.25rem, 0.8vw, 0.5rem);
-                /* 16px - 24px */
-                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-                background: var(--primary);
-                opacity: 1;
-                position: relative;
-                display: block;
-            }
-        }
-
-        .cs-text {
-            /* 16px - 25px */
-            font-size: clamp(1rem, 1.95vw, 1.5625rem);
-            line-height: 1.5em;
-            text-align: center;
-            width: 100%;
-            /* 464px - 800px */
-            max-width: clamp(29rem, 60vw, 50rem);
-            margin: 0 auto;
-            /* 40px - 48px */
-            margin-bottom: clamp(2.5rem, 4vw, 3rem);
-            color: #fff;
-        }
-    }
+  #hero-2153 {
+    padding: var(--sectionPadding);
+    /* 150px - 200px - top leaving extra space for the navigation */
+    /* 40px - 90px bottom */
+    padding: clamp(9.375rem, 16.95vw, 12.5rem) 1rem clamp(2.5rem, 4.82vw, 5.625rem) 1rem;
+    background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2153 .cs-container {
+    width: 100%;
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 5vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2153 .cs-content {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2153 .cs-flex {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #hero-2153 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.438rem, 5vw, 3.813rem);
+  }
+  #hero-2153 .cs-text {
+    max-width: none;
+  }
+  #hero-2153 .cs-video-group {
+    width: 100%;
+    /* 340px - 547px */
+    height: clamp(15.25rem, 17.5rem, 20.2rem);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-2153 .cs-video-wrapper {
+    width: 100%;
+    /* changes to 90% at tablet, then back to 100% at desktop */
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  #hero-2153 .cs-video-wrapper:hover {
+    cursor: pointer;
+  }
+  #hero-2153 .cs-video-wrapper:hover .cs-play {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  #hero-2153 .cs-video-wrapper video,
+  #hero-2153 .cs-video-wrapper .cs-picture {
+    width: 100%;
+    height: 100%;
+    /* makes image act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #hero-2153 .cs-video-wrapper video img,
+  #hero-2153 .cs-video-wrapper .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* makes image act as a background image */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #hero-2153 .cs-video-wrapper video:before,
+  #hero-2153 .cs-video-wrapper .cs-picture:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #hero-2153 .cs-play {
+    /* 80px - 120px */
+    width: clamp(5rem, 14vw, 7.5rem);
+    height: clamp(5rem, 14vw, 7.5rem);
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, opacity 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  #hero-2153 .cs-play.cs-hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) !important;
+  }
+  #hero-2153 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+  }
 }
-
-/* Desktop - 1300px (To make image background parallax) */
-@media only screen and (min-width: 81.25rem) {
-    #hero-143 {
-        background: url("/assets/images/landing.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        /* makes the parallax effect */
-        background-attachment: fixed;
-
-        .cs-background {
-            img {
-                display: none;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-143 {
-            &:before,
-            &:after {
-                background: var(--dark);
-            }
-
-            .cs-background {
-                &:before {
-                    opacity: 0.85;
-                }
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---         Services           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #h-services-143 {
-        /* 40px - 100px */
-        padding: 0 (16/16em) clamp(2.5rem, 7.9vw, 6.25rem) (16/16rem);
-        position: relative;
-        /* give a higher z index than the hero so it can sit on top */
-        z-index: 10;
-
-        .cs-card-group {
-            width: 100%;
-            max-width: (465/16rem);
-            margin: 0 auto 0;
-            /* negative margin pulls it up on top of the hero section */
-            /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
-            to make the value negative since clamp doesn't work with negative values */
-            margin-top: ~"calc(clamp(5rem, 13vw, 4.75rem)*-1)";
-            /* 40px - 60px top and bottom, 16px - 44px left & right */
-            padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 5.3vw, 2.75rem);
-            box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
-            border-radius: (5/16rem);
-            border-top: 8px solid var(--primary);
-            background-color: #fff;
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-        }
-
-        .cs-item {
-            list-style: none;
-            margin: 0 auto (32/16rem);
-            width: 100%;
-            max-width: (360/16rem);
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-
-        .cs-icon {
-            /* 68px - 88px */
-            width: clamp(4.25rem, 8.8vw, 5.5rem);
-            /* 68px - 88px */
-            height: clamp(4.25rem, 8.8vw, 5.5rem);
-            margin: auto;
-            /* 20px - 24px */
-            margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                /* 44px - 52px */
-                width: clamp(2.75rem, 5.8vw, 3.25rem);
-                height: auto;
-            }
-        }
-
-        .cs-title {
-            font-size: (20/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            text-align: center;
-            margin: 0 auto (8/16rem);
-            color: var(--headerColor);
-        }
-
-        .cs-text {
-            font-size: (16/16rem);
-            text-align: center;
-            line-height: 1.5em;
-            max-width: (360/16rem);
-            margin: 0 auto;
-            color: var(--bodyTextColor);
-        }
-    }
-}
-
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #h-services-143 {
-        .cs-card-group {
-            max-width: (784/16rem);
-            /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
-               to make the value negative since clamp doesn't work with negative values */
-            margin-top: ~"calc(clamp(4.75rem, 20vw, 20rem)*-1)";
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            column-gap: (40/16rem);
-        }
-
-        .cs-item {
-            width: 45%;
-            max-width: (314/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-    }
+  #hero-2153 .cs-container {
+    max-width: 59rem;
+  }
+  #hero-2153 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #hero-2153 .cs-flex {
+    width: 50%;
+  }
+  #hero-2153 .cs-title {
+    margin: 0;
+  }
+  #hero-2153 .cs-text {
+    max-width: 23.875rem;
+  }
+  #hero-2153 .cs-video-group {
+    width: 100%;
+    /* 340px - 547px */
+    height: clamp(21.25rem, 22.5rem, 27.2rem);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
 }
-
-/* Desktop - 1300px */
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-2153 .cs-container {
+    max-width: 80rem;
+  }
+    #hero-2153 .cs-video-group {
+    width: 100%;
+    /* 340px - 547px */
+    height: clamp(27.25rem, 42.5rem, 50.2rem);
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+}
+/* Large Desktop 1300px */
 @media only screen and (min-width: 81.25rem) {
-    #h-services-143 {
-        .cs-card-group {
-            max-width: (1280/16rem);
-            flex-wrap: nowrap;
-        }
-
-        .cs-item {
-            margin: 0;
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-    }
+  #hero-2153 .cs-container {
+    max-width: 107.5rem;
+  }
+  #hero-2153 .cs-text {
+    max-width: 35rem;
+  }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #h-services-143 {
-            .cs-card-group {
-                background: var(--medium);
-            }
+/***********************************************
+************************************************
+***********************************************/
 
-            .cs-icon {
-                background: var(--darkTint);
-            }
+/* -------------------------------------------------------------------------- */
+/* Global styles for the host document, outside of the Shadow DOM             */
+/* -------------------------------------------------------------------------- */
 
-            .cs-title {
-                color: #fff;
-            }
-
-            .cs-text {
-                color: #fff;
-            }
-        }
-    }
+background-video,
+live-background-video {
+  display: contents;
 }
+
+/*
+Required to override any default video and image styles (such as
+Tailwind's CSS reset) and ensure they fill the container as expected.
+*/
+background-video video,
+background-video [slot="poster"],
+live-background-video video,
+live-background-video [slot="poster"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+background-video video::-webkit-media-text-track-container,
+live-background-video video::-webkit-media-text-track-container {
+  z-index: 1;
+  font-family: inherit;
+  scale: 0.98;
+  translate: 0 var(--media-caption-track-y, 0);
+  transition: translate var(--media-caption-track-duration, 0) ease-out;
+  transition-delay: var(--media-caption-track-delay, 0);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Shared styles for all HTML skins                                           */
+/* -------------------------------------------------------------------------- */
+
+media-tooltip-group {
+  display: contents;
+}
+
+:host {
+  /* `display:grid` fixes a weird issue with Safari when setting aspect-ratio */
+  display: grid;
+  width: 100%;
+}
+
+/* Hide volume popover when volume control is unsupported (e.g., iOS Safari). */
+.media-popover--volume:has(media-volume-slider[data-availability="unsupported"]) {
+  display: none;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+.media-minimal-skin *,
+.media-minimal-skin *::before,
+.media-minimal-skin *::after {
+  box-sizing: border-box;
+}
+.media-minimal-skin img,
+.media-minimal-skin video,
+.media-minimal-skin svg {
+  display: block;
+  max-width: 100%;
+}
+.media-minimal-skin button {
+  font: inherit;
+}
+.media-minimal-skin [hidden][hidden] {
+  /* Keep authored templates hidden even when component classes set display. */
+  display: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .media-minimal-skin {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* ==========================================================================
+   Root Container
+   ========================================================================== */
+
+.media-minimal-skin {
+  --media-current-shadow-color: oklch(from currentColor 0 0 0 / clamp(0, calc((l - 0.5) * 0.5), 0.15));
+  --media-current-shadow-color-subtle: oklch(from var(--media-current-shadow-color) l c h / calc(alpha * 0.4));
+  --media-icon-size: 18px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  container: media-root / inline-size;
+  font-family:
+    Inter Variable,
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  font-size: 0.8125rem; /* 13px at 100% font size */
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  line-height: 1.5;
+  letter-spacing: normal;
+  outline: 2px solid transparent;
+  outline-offset: -4px;
+  border-radius: var(--media-border-radius, 0.75rem);
+  isolation: isolate;
+  transition-timing-function: ease-out;
+  transition-duration: 100ms;
+  transition-property: outline-offset, outline-color;
+
+  &:focus-visible {
+    outline-color: currentColor;
+    outline-offset: 2px;
+  }
+}
+
+/* ==========================================================================
+   Media Element
+   ========================================================================== */
+
+.media-minimal-skin ::slotted(video),
+.media-minimal-skin video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--media-object-fit, contain);
+  object-position: var(--media-object-position, center);
+}
+.media-minimal-skin ::slotted(video) {
+  border-radius: var(--media-video-border-radius);
+}
+.media-minimal-skin video {
+  border-radius: inherit;
+}
+
+.media-minimal-skin:fullscreen ::slotted(video),
+.media-minimal-skin:fullscreen video {
+  object-fit: contain;
+}
+
+
+/* ==========================================================================
+   Buffering Indicator
+   ========================================================================== */
+
+.media-minimal-skin .media-buffering-indicator {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: oklch(1 0 0);
+  pointer-events: none;
+
+  &:not([data-visible]) {
+    --media-spinner-animation: none;
+  }
+
+  &[data-visible] {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   Error Dialog
+   ========================================================================== */
+
+.media-minimal-skin .media-error:not([data-open]) {
+  display: none;
+}
+
+.media-minimal-skin .media-error__title {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.media-minimal-skin .media-error__description {
+  overflow-wrap: anywhere;
+  opacity: 0.7;
+}
+
+.media-minimal-skin .media-error__actions {
+  display: flex;
+  gap: 0.5rem;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.media-minimal-skin .media-error[data-open] ~ .media-controls * {
+  visibility: hidden;
+}
+
+
+
+
+/* ==========================================================================
+   Poster Image
+   ========================================================================== */
+
+.media-minimal-skin media-poster,
+.media-minimal-skin > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.media-minimal-skin media-poster:not([data-visible]),
+.media-minimal-skin > img:not([data-visible]) {
+  opacity: 0;
+}
+.media-minimal-skin media-poster ::slotted(img),
+.media-minimal-skin media-poster img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--media-object-fit, contain);
+  object-position: var(--media-object-position, center);
+  border-radius: var(--media-video-border-radius);
+}
+.media-minimal-skin > img {
+  object-fit: var(--media-object-fit, contain);
+  object-position: var(--media-object-position, center);
+  border-radius: inherit;
+}
+
+.media-minimal-skin:fullscreen media-poster ::slotted(img),
+.media-minimal-skin:fullscreen media-poster img,
+.media-minimal-skin:fullscreen > img {
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Media preview
+   ========================================================================== */
+.media-minimal-skin .media-preview {
+  pointer-events: none;
+
+  & .media-preview__thumbnail-wrapper {
+    position: relative;
+    background-color: oklch(0 0 0 / 0.9);
+    border-radius: 0.5rem;
+  }
+  & .media-preview__thumbnail {
+    display: block;
+    border-radius: inherit;
+  }
+
+  & .media-preview__time {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  & .media-overlay {
+    opacity: 1;
+  }
+
+  & .media-preview__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    translate: -50% -50%;
+  }
+
+  & .media-preview__thumbnail,
+  & .media-preview__spinner {
+    transition: opacity 150ms ease-out;
+  }
+
+  &:not(:has(.media-preview__thumbnail[data-loading])) {
+    & .media-preview__spinner {
+      --media-spinner-animation: none;
+    }
+  }
+
+  &:has(.media-preview__thumbnail[data-loading]) {
+    & .media-preview__thumbnail {
+      opacity: 0;
+    }
+    & .media-preview__spinner {
+      opacity: 1;
+    }
+  }
+}
+
+
+.media-minimal-skin .media-input-feedback-island--volume[data-level="high"] .media-icon--volume-high,
+.media-minimal-skin .media-input-feedback-island--volume[data-level="low"] .media-icon--volume-low,
+.media-minimal-skin .media-input-feedback-island--volume[data-level="off"] .media-icon--volume-off {
+  display: block;
+}
+
+.media-minimal-skin .media-input-feedback-island--status[data-status="captions-on"] .media-icon--captions-on,
+.media-minimal-skin .media-input-feedback-island--status[data-status="captions-off"] .media-icon--captions-off,
+.media-minimal-skin .media-input-feedback-island--status[data-status="fullscreen"] .media-icon--fullscreen-enter,
+.media-minimal-skin .media-input-feedback-island--status[data-status="exit-fullscreen"] .media-icon--fullscreen-exit,
+.media-minimal-skin .media-input-feedback-island--status[data-status="pip"] .media-icon--pip-enter,
+.media-minimal-skin .media-input-feedback-island--status[data-status="exit-pip"] .media-icon--pip-exit {
+  display: block;
+}
+
+/* --- Boundary shake ------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .media-minimal-skin .media-input-feedback-island--volume[data-min] .media-input-feedback-island__content,
+  .media-minimal-skin .media-input-feedback-island--volume[data-max] .media-input-feedback-island__content {
+    animation: media-shake 300ms ease-in-out;
+  }
+}
+
+/* --- Bubble ---------------------------------------------------------------- */
+
+.media-minimal-skin .media-input-feedback-bubble {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1;
+  grid-column: 2; /* default to center for status bubbles and undirected seeks */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: opacity 250ms ease-out;
+
+  @container media-root (width > 24rem) {
+    padding: 2rem;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+  }
+}
+/* Direction placement — seek bubbles move to the side implied by their direction. */
+.media-minimal-skin .media-input-feedback-bubble[data-direction="backward"] {
+  grid-column: 1;
+  justify-self: left;
+}
+
+.media-minimal-skin .media-input-feedback-bubble:not([data-direction]) {
+  grid-column: 2;
+  transition-timing-function:
+    ease-out, linear(0, 0.12 1.5%, 1.35 9.7%, 2.2 13.9%, 3 19.9%, 2.7 21.8%, 0.62 37.5%, 0.96 50.9%, 1);
+  transition-duration: 600ms;
+  transition-property: opacity, scale;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: opacity 100ms ease-out;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+    scale: 0.8;
+    transition-timing-function: ease-in;
+    transition-duration: 200ms;
+  }
+}
+
+.media-minimal-skin .media-input-feedback-bubble[data-direction="forward"] {
+  grid-column: 3;
+  justify-self: right;
+}
+
+/* --- Bubble icons ---------------------------------------------------------- */
+
+.media-minimal-skin .media-input-feedback-bubble .media-icon {
+  display: none;
+  width: 36px;
+  height: 36px;
+}
+
+/* seek: seek icon, flipped for backward */
+.media-minimal-skin .media-input-feedback-bubble[data-direction] .media-icon--seek {
+  display: block;
+}
+
+.media-minimal-skin .media-input-feedback-bubble[data-direction="backward"] .media-icon--seek {
+  transform: scaleX(-1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .media-minimal-skin
+    .media-input-feedback-bubble[data-direction="forward"]:not([data-starting-style])
+    .media-icon--seek {
+    animation: media-slide-in-forward 300ms ease-in-out;
+  }
+
+  .media-minimal-skin
+    .media-input-feedback-bubble[data-direction="backward"]:not([data-starting-style])
+    .media-icon--seek {
+    animation: media-slide-in-backward 300ms ease-in-out;
+  }
+
+  .media-minimal-skin .media-input-feedback-island--status[data-status]:not([data-starting-style]) .media-icon,
+  .media-minimal-skin .media-input-feedback-bubble[data-status]:not([data-starting-style]) .media-icon {
+    animation: media-pop-in 250ms ease-out;
+  }
+}
+
+.media-minimal-skin .media-input-feedback-bubble[data-status="pause"] .media-icon--pause,
+.media-minimal-skin .media-input-feedback-bubble[data-status="play"] .media-icon--play {
+  display: block;
+}
+
+/* ==========================================================================
+   Icon State Visibility for Video Skins
+
+   Data-attribute-driven visibility rules for multi-state icon buttons.
+   Uses :is() with both element selectors (for HTML custom element wrappers)
+   and class selectors (for React rendered SVG elements).
+   ========================================================================== */
+
+/* --- All icons hidden by default --- */
+
+.media-button--play .media-icon--restart,
+.media-button--play .media-icon--play,
+.media-button--play .media-icon--pause,
+.media-button--mute .media-icon--volume-off,
+.media-button--mute .media-icon--volume-low,
+.media-button--mute .media-icon--volume-high,
+.media-button--fullscreen .media-icon--fullscreen-enter,
+.media-button--fullscreen .media-icon--fullscreen-exit,
+.media-button--pip .media-icon--pip-enter,
+.media-button--pip .media-icon--pip-exit,
+.media-button--cast .media-icon--cast-enter,
+.media-button--cast .media-icon--cast-exit,
+.media-button--captions .media-icon--captions-off,
+.media-button--captions .media-icon--captions-on {
+  display: none;
+  opacity: 0;
+}
+
+/* --- Active icon per state --- */
+
+/* Play: ended → restart */
+.media-button--play[data-ended] .media-icon--restart,
+/* Play: paused (not ended) → play */
+.media-button--play:not([data-ended])[data-paused] .media-icon--play,
+/* Play: playing (not paused, not ended) → pause */
+.media-button--play:not([data-paused]):not([data-ended]) .media-icon--pause,
+/* Mute: muted → volume off */
+.media-button--mute[data-muted] .media-icon--volume-off,
+/* Mute: volume low (not muted) → volume low */
+.media-button--mute:not([data-muted])[data-volume-level="low"] .media-icon--volume-low,
+/* Mute: volume high (not muted, not low) → volume high */
+.media-button--mute:not([data-muted]):not([data-volume-level="low"]) .media-icon--volume-high,
+/* Fullscreen: not fullscreen → enter */
+.media-button--fullscreen:not([data-fullscreen]) .media-icon--fullscreen-enter,
+/* Fullscreen: fullscreen → exit */
+.media-button--fullscreen[data-fullscreen] .media-icon--fullscreen-exit,
+/* Picture-in-Picture: not active → enter */
+.media-button--pip:not([data-pip]) .media-icon--pip-enter,
+/* Picture-in-Picture: active → exit */
+.media-button--pip[data-pip] .media-icon--pip-exit,
+/* Cast: not connected → enter */
+.media-button--cast:not([data-cast-state="connected"]) .media-icon--cast-enter,
+/* Cast: connected → exit */
+.media-button--cast[data-cast-state="connected"] .media-icon--cast-exit,
+/* Captions: not active → captions off */
+.media-button--captions:not([data-active]) .media-icon--captions-off,
+/* Captions: active → captions on */
+.media-button--captions[data-active] .media-icon--captions-on {
+  display: block;
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Global @keyframes for all video skins (CSS & Tailwind)                     */
+/* -------------------------------------------------------------------------- */
+
+@keyframes media-shake {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  20% {
+    translate: -6px 0;
+  }
+  40% {
+    translate: 4px 0;
+  }
+  60% {
+    translate: -2px 0;
+  }
+  80% {
+    translate: 1px 0;
+  }
+}
+
+@keyframes media-slide-in-forward {
+  from {
+    translate: -60% 0;
+    opacity: 0;
+  }
+}
+
+@keyframes media-slide-in-backward {
+  from {
+    translate: 60% 0;
+    opacity: 0;
+  }
+}
+
+@keyframes media-pop-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Global @properties for all video skins (CSS & Tailwind)                    */
+/* -------------------------------------------------------------------------- */
+
+@property --media-progress-fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+
+/* ==========================================================================
+   Root
+   ========================================================================== */
+
+.media-minimal-skin--video {
+  --media-border-color: oklch(0 0 0 / 0.15);
+  --media-video-border-radius: var(--media-border-radius, 0.75rem);
+  --media-controls-background-color: transparent;
+  --media-controls-transition-duration: 100ms;
+  --media-controls-transition-timing-function: ease-out;
+  --media-error-dialog-transition-duration: 150ms;
+  --media-error-dialog-transition-delay: 100ms;
+  --media-error-dialog-transition-timing-function: ease-out;
+  --media-popup-transition-duration: 100ms;
+  --media-popup-transition-timing-function: ease-out;
+  --media-tooltip-background-color: oklch(1 0 0 / 0.1);
+  --media-tooltip-border-color: transparent;
+  --media-tooltip-backdrop-filter: blur(16px) saturate(1.5);
+  --media-tooltip-text-color: currentColor;
+  --media-tooltip-side-offset: 0.5rem;
+  --media-tooltip-boundary-offset: 0.5rem;
+  --media-popover-side-offset: 1.5rem;
+  --media-popover-boundary-offset: 0.5rem;
+  overflow: clip;
+  background: oklch(0 0 0);
+
+  @media (prefers-reduced-motion: reduce) {
+    --media-error-dialog-transition-duration: 50ms;
+    --media-error-dialog-transition-delay: 0ms;
+    --media-popup-transition-duration: 0ms;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --media-border-color: oklch(1 0 0 / 0.15);
+  }
+
+  @media (prefers-reduced-transparency: reduce) or (prefers-contrast: more) {
+    --media-controls-background-color: oklch(0 0 0);
+    --media-tooltip-background-color: oklch(0 0 0);
+  }
+
+  @container media-root (width > 42rem) {
+    & > * {
+      --media-popover-side-offset: 0.5rem;
+    }
+  }
+
+  &:has(.media-controls:not([data-visible])) {
+    /* Slight delay to hide controls on non-touch devices after interaction */
+    @media (pointer: fine) {
+      --media-controls-transition-duration: 300ms;
+    }
+    @media (pointer: coarse) {
+      --media-controls-transition-duration: 150ms;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      --media-controls-transition-duration: 50ms;
+    }
+  }
+
+  /* Inner border ring */
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    content: "";
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--media-border-color);
+  }
+
+  /* Fullscreen */
+  &:fullscreen {
+    --media-border-radius: 0;
+  }
+}
+
+/* ==========================================================================
+   Error Dialog
+   ========================================================================== */
+
+.media-minimal-skin--video .media-error {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  outline: none;
+}
+
+.media-minimal-skin--video .media-error__dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 16rem;
+  padding: 1rem;
+  color: oklch(1 0 0);
+  text-shadow: 0 1px 0 oklch(0 0 0 / 0.5);
+  pointer-events: auto;
+  transition-delay: var(--media-error-dialog-transition-delay);
+  transition-timing-function: var(--media-error-dialog-transition-timing-function);
+  transition-duration: var(--media-error-dialog-transition-duration);
+  transition-property: opacity, scale;
+}
+
+.media-minimal-skin--video .media-error[data-starting-style] .media-error__dialog,
+.media-minimal-skin--video .media-error[data-ending-style] .media-error__dialog {
+  opacity: 0;
+  scale: 0.5;
+}
+.media-minimal-skin--video .media-error[data-ending-style] .media-error__dialog {
+  transition-delay: 0ms;
+}
+
+.media-minimal-skin--video .media-error__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.375rem 0;
+}
+
+.media-minimal-skin--video .media-error__title {
+  font-size: 1.125rem;
+}
+
+.media-minimal-skin--video .media-error[data-open] ~ .media-controls {
+  display: none;
+}
+
+/* ==========================================================================
+  Controls (hide/show behavior)
+  ========================================================================== */
+
+.media-minimal-skin--video .media-controls {
+  position: absolute;
+  inset-inline: 0.25rem;
+  bottom: 0.25rem;
+  z-index: 10;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  max-width: 56rem;
+  padding: 0.25rem;
+  margin-inline: auto;
+  color: oklch(1 0 0);
+  border-radius: 0.75rem;
+  transition-timing-function: var(--media-controls-transition-timing-function);
+  transition-duration: var(--media-controls-transition-duration);
+
+  @media (pointer: fine) {
+    transition-property: translate, filter, opacity;
+    will-change: translate, filter, opacity;
+  }
+
+  @media (pointer: coarse) {
+    transition-property: translate, opacity;
+    will-change: translate, opacity;
+  }
+
+  &:not([data-visible]) {
+    pointer-events: none;
+    opacity: 0;
+
+    @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      filter: blur(8px);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      translate: 0 100%;
+    }
+  }
+
+  & .media-time-controls {
+    flex: 0 0 100%;
+    order: -1;
+    padding-inline: 0.625rem;
+  }
+
+  & .media-button-group:first-child {
+    flex: 1;
+    text-align: left;
+  }
+
+  & .media-button-group:last-child {
+    flex: 1;
+    justify-content: end;
+  }
+
+  @container media-root (width > 42rem) {
+    inset-inline: 0.5rem;
+    bottom: 0.5rem;
+    flex-wrap: nowrap;
+
+    & .media-time-controls {
+      flex: 1;
+      order: unset;
+    }
+
+    & .media-button-group:first-child,
+    & .media-button-group:last-child {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+/* Hide cursor when controls are hidden */
+.media-minimal-skin--video:has(.media-controls:not([data-visible])) {
+  cursor: none;
+}
+
