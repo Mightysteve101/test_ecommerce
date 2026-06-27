@@ -1,0 +1,272 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-250 {
+        /* set padding top to 0 if the section above it is another white background section, same for padding bottom. We added the padding here in case this section gets placed above or below sections with full background colors.  Without this padding, the top of this sections color portion will be touching the neighboring section edge and it looks bad */
+        padding: var(--sectionPadding);
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+        z-index: 1;
+        background: var(--background)
+    }
+    #sbs-250 .cs-container {
+        width: 100%;
+        /* changes to 1280px on tablet */
+        max-width: 34.375rem;
+        padding: var(--sectionPadding);
+        margin: auto;
+        background: var(--background);
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+    }
+    #sbs-250 .cs-container:before {
+        /* Bottom Line */
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #b4b2c7;
+        background: linear-gradient(
+            270deg,
+            #b4b2c7 0%,
+            rgba(250, 251, 252, 0.005) 0%,
+            #b4b2c7 100%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        /* flips it horizontally */
+        transform: scaleX(-1);
+    }
+    #sbs-250 .cs-container:after {
+        /* Right Line */
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: #b4b2c7;
+        background: linear-gradient(
+            180deg,
+            #b4b2c7 0%,
+            rgba(250, 251, 252, 0.005) 0%,
+            #b4b2c7 100%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+    }
+    #sbs-250 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 27.125rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #sbs-250 .cs-text {
+        color: var(--bodyTextColorWhite);
+    }
+    #sbs-250 .cs-button-solid {
+        font-size: 1rem;
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+        min-width: 9.375rem;
+        padding: 0.5rem;
+        background-color: var(--primary);
+        border-radius: 0.5rem;
+        /* display: inline-block; */
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+    #sbs-250 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: var(--background);
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.5rem;
+        transition: width 0.3s;
+    }
+    #sbs-250 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #sbs-250 .cs-picture {
+        width: 100%;
+        max-width: 32.625rem;
+        margin: 0;
+        border: 1px solid var(--primary);
+        position: relative;
+        display: block;
+        /* width divided by height */
+        aspect-ratio: 1;
+        /* prevents border from adding to height and width */
+        box-sizing: border-box;
+    }
+     #sbs-250 .cs-button-solid img{
+        align-self: center;
+    }
+    #sbs-250 .cs-button-solid .cs-text{
+        align-self: center;
+    }
+
+    #sbs-250 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-250 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #sbs-250 .cs-picture {
+        /* 415px - 522px */
+        height: clamp(25.9375rem, 40.5vw, 32.625rem);
+        width: 50%;
+        flex: none;
+    }
+    #sbs-250 .cs-content {
+        max-width: 33rem;
+        margin: 0;
+        width: 45%;
+    }
+}
+
+/*-- -------------------------- -->
+<---        List Flair          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-content-2177 {
+    width: 100%;
+    /* 32px - 64px */
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #cs-content-2177 .cs-li {
+    background-color: var(--secondary);
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-content-2177 .cs-number {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--secondaryLight);
+  }
+  #cs-content-2177 .cs-li-text {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--bodyTextColor);
+  }
+
+  #list-1404 .cs-item .cs-text{
+    text-align: center;
+  }
+}
+
+/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-1404 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+@media only screen and (min-width: 0rem) {
+    #list-1404 {
+        width: 100%;
+        max-width: 39.375rem;
+        margin: 1.5rem 0 1.5rem 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #list-1404 .cs-item {
+        list-style: none;
+        /* 16px - 24px */
+        padding: 0.5rem;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        width: 10rem;
+        height: 3rem;
+    }
+    #list-1404 .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    #list-1404 .cs-h3-icon {
+        width: 2rem;
+        height: auto;
+        display: block;
+    }
+    #list-1404 .cs-item-text {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+}
+
+@media only screen and (min-width: 48rem){
+    #list-1404 {
+        width: 100%;
+        max-width: 39.375rem;
+        margin: 1.5rem 0 1.5rem 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+}
