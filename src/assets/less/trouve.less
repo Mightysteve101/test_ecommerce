@@ -80,7 +80,7 @@
     #sbs-250 .cs-text {
         color: var(--bodyTextColorWhite);
     }
-    #sbs-250 .cs-button-solid {
+    #sbs-250 .cs-button-2 {
         font-size: 1rem;
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
@@ -98,22 +98,11 @@
         box-sizing: border-box;
         display: flex;
         justify-content: center;
+        transition: background-color 0.3s;
     }
-    #sbs-250 .cs-button-solid:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: var(--background);
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: 0.5rem;
-        transition: width 0.3s;
-    }
-    #sbs-250 .cs-button-solid:hover:before {
-        width: 100%;
+
+    #sbs-250 .cs-button-2:hover {
+        background-color: var(--background);
     }
     #sbs-250 .cs-picture {
         width: 100%;
@@ -127,10 +116,10 @@
         /* prevents border from adding to height and width */
         box-sizing: border-box;
     }
-     #sbs-250 .cs-button-solid img{
+     #sbs-250 .cs-button-2 img{
         align-self: center;
     }
-    #sbs-250 .cs-button-solid .cs-text{
+    #sbs-250 .cs-button-2 .cs-text{
         align-self: center;
     }
 
