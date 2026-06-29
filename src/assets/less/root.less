@@ -118,51 +118,24 @@
 	}
 
 	// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
-	.cs-button-solid {
-		z-index: 1;
-		position: relative;
-		display: inline-block;
-		background-color: var(--primary);
-		width: auto;
-		padding: (16/16rem) (32/16rem);
-		text-decoration: none;
-		text-transform: uppercase;
-		font-size: (16/16rem);
-		line-height: (16/16em);
-		font-weight: bold;
-		border-radius: (4/16rem);
-		overflow: hidden;
-
-		// Transition Properties
-		color: var(--bodyTextColorWhite);
-		transition: color 0.3s;
-		transition-delay: 0.1s;
-		text-align: center;
-
-		&:hover {
-			color: #fff;
-
-			&:before {
-				width: 100%;
-			}
-		}
-
-		&:before {
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			opacity: 1;
-			display: block;
-			background-color: #000;
-			height: 100%;
-
-			//Transition properties
-			width: 0;
-			transition: width 0.3s;
-		}
-	}
+    .cs-button-2 {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 8vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      margin: auto;
+      color: #fff;
+      padding: 0 1.5rem;
+      background-color: #9a6509;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      transition: background-color 0.3s;
+  }
+  .cs-button-2:hover {
+      background-color: #000;
+  }
 
 	.cs-button-outline {
 		z-index: 1;
